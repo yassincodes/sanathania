@@ -1,0 +1,113 @@
+.book-link {
+  display: block;
+  flex-shrink: 0;
+}
+
+.book {
+  display: flex;
+  width: 110px;
+  height: 155px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  filter: drop-shadow(3px 5px 6px var(--shadow));
+}
+
+.book:hover {
+  transform: translateY(-12px) rotate(-2deg);
+  filter: drop-shadow(6px 12px 12px var(--shadow));
+}
+
+.book-spine {
+  width: 22px;
+  background: var(--spine-color);
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 8px 2px;
+  border-right: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.spine-title {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 130px;
+}
+
+.book-cover {
+  flex: 1;
+  background: var(--book-color);
+  border-radius: 0 6px 6px 0;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-right: 3px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.book-emoji {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.book-title {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  text-align: center;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.3;
+  padding: 0 2px;
+}
+
+.book-author {
+  font-size: 0.6rem;
+  color: var(--text-medium);
+  margin: 0.3rem 0 0;
+  text-align: center;
+}
+
+.book-decoration {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  .book {
+    width: 90px;
+    height: 130px;
+  }
+
+  .book-spine {
+    width: 18px;
+  }
+
+  .book-title {
+    font-size: 0.62rem;
+  }
+}

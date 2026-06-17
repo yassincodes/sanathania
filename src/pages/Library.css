@@ -1,0 +1,105 @@
+.library-page {
+  padding-bottom: 3rem;
+}
+
+.students-section {
+  text-align: center;
+  padding: 0 1.5rem 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--wood-dark);
+  margin: 0 0 1rem;
+}
+
+.students-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.student-badge {
+  background: var(--white);
+  border: 2px dashed var(--wood-light);
+  border-radius: 50px;
+  padding: 0.35rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--wood-dark);
+  transition: all 0.2s;
+}
+
+.student-badge:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.students-note {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.shelf-section {
+  padding: 0 1rem 2rem;
+}
+
+.bookshelf {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.shelf-board {
+  height: 18px;
+  background: linear-gradient(180deg, var(--wood-light) 0%, var(--wood-medium) 40%, var(--wood-dark) 100%);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px var(--shadow), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.top-shelf {
+  margin-bottom: -2px;
+}
+
+.bottom-shelf {
+  margin-top: -2px;
+}
+
+.books-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.8rem;
+  padding: 1.2rem 1rem 0.8rem;
+  background: linear-gradient(180deg, rgba(92, 61, 46, 0.08) 0%, rgba(92, 61, 46, 0.15) 100%);
+  min-height: 180px;
+  border-left: 8px solid var(--wood-medium);
+  border-right: 8px solid var(--wood-medium);
+}
+
+.library-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-medium);
+}
+
+.footer-small {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .books-row {
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+}
