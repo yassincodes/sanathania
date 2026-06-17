@@ -14,7 +14,7 @@ export default function Story() {
         <CosmicBackground />
         <Header showBack />
         <div className="story-not-found rise">
-          <p>🌫️ ضاع هذا الكتاب بين النجوم!</p>
+          <p>😔 لم نجد هذا الكتاب على الرفّ.</p>
           <Link to="/" className="magic-btn">ارجع للمكتبة</Link>
         </div>
       </div>
@@ -31,9 +31,9 @@ export default function Story() {
           <span className="story-emoji">{story.emoji}</span>
           <h1 className="story-title">{story.title}</h1>
           <p className="story-author">
-            ✍️ كتبها: <strong>{story.author}</strong>
+            ✍️ تأليف: <strong>{story.author}</strong>
           </p>
-          <p className="story-grade">الصف الثاني — مكتبة السنة الثانية</p>
+          <p className="story-grade">قصةٌ من كتابة تلميذ الصفّ الثاني</p>
         </div>
 
         <div className="story-pages">

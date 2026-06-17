@@ -23,7 +23,7 @@ export default function Book({ story, index = 0 }) {
           <div className="cover-shine" />
           <span className="book-emoji">{story.emoji}</span>
           <h3 className="book-title">{story.title}</h3>
-          <p className="book-author">بقلم: {story.author}</p>
+          <p className="book-author">تأليف: {story.author}</p>
           <span className="book-open-hint">افتح الكتاب ✦</span>
         </div>
       </div>
