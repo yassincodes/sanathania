@@ -1,62 +1,74 @@
 .library-header {
-  padding: 2rem 1.5rem 1rem;
+  padding: 2.5rem 1.5rem 1rem;
   text-align: center;
-}
-
-.header-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  position: relative;
 }
 
 .back-btn {
-  align-self: flex-start;
-  background: var(--white);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--paper);
   border: 2px solid var(--wood-light);
-  border-radius: 20px;
-  padding: 0.4rem 1rem;
-  font-family: var(--font-heading);
+  border-radius: 50px;
+  padding: 0.45rem 1.2rem;
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 0.95rem;
   color: var(--wood-dark);
-  transition: all 0.2s;
-  margin-bottom: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 0 var(--wood-light);
 }
 
 .back-btn:hover {
-  background: var(--accent-light);
-  border-color: var(--accent);
-  color: var(--white);
-  transform: translateX(4px);
+  background: var(--warm);
+  border-color: var(--warm);
+  color: var(--paper);
+  transform: translateX(-3px);
+  box-shadow: 0 3px 0 #a84a24;
+}
+
+.back-arrow {
+  font-size: 1.1rem;
 }
 
 .header-subtitle {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--accent);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--warm);
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .header-title {
-  font-size: 2.8rem;
+  font-size: 4.2rem;
+  line-height: 1.1;
+  margin: 0.4rem 0;
   color: var(--wood-dark);
-  margin: 0.3rem 0;
-  text-shadow: 2px 2px 0 var(--wood-light);
+  text-shadow: 2px 3px 0 var(--wood-edge), 0 6px 14px var(--shadow);
 }
 
 .header-credit {
-  font-size: 1.05rem;
-  color: var(--text-medium);
+  font-size: 1.1rem;
+  color: var(--ink-soft);
   margin: 0;
 }
 
 .header-credit strong {
-  color: var(--wood-dark);
+  color: var(--gold);
+  font-weight: 800;
 }
 
 @media (max-width: 600px) {
   .header-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
+  }
+  .back-btn {
+    position: static;
+    margin-bottom: 1rem;
   }
 }

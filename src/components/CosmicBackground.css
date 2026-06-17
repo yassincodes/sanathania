@@ -1,0 +1,65 @@
+.room-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% -10%, #fbe6c9 0%, transparent 55%),
+    linear-gradient(180deg, #f4e3c4 0%, #ecd4ad 45%, #e3c79b 100%);
+}
+
+/* subtle striped wallpaper */
+.room-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(155, 110, 60, 0.05) 0px,
+    rgba(155, 110, 60, 0.05) 2px,
+    transparent 2px,
+    transparent 26px
+  );
+}
+
+/* warm lamp glows */
+.room-light {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+}
+
+.room-light-1 {
+  width: 360px;
+  height: 360px;
+  top: -80px;
+  right: 8%;
+  background: radial-gradient(circle, rgba(255, 214, 140, 0.9) 0%, transparent 70%);
+}
+
+.room-light-2 {
+  width: 320px;
+  height: 320px;
+  bottom: -60px;
+  left: 6%;
+  background: radial-gradient(circle, rgba(255, 196, 120, 0.7) 0%, transparent 70%);
+}
+
+/* gentle floating dust motes in the light */
+.dust {
+  position: absolute;
+  color: rgba(255, 240, 200, 0.8);
+  font-size: 0.8rem;
+  filter: drop-shadow(0 0 6px rgba(255, 220, 150, 0.8));
+  animation: motes 9s ease-in-out infinite;
+}
+
+.dust-1 { top: 20%; right: 18%; animation-delay: 0s; }
+.dust-2 { top: 55%; left: 14%; animation-delay: -3s; }
+.dust-3 { top: 38%; left: 45%; animation-delay: -6s; }
+
+@keyframes motes {
+  0%, 100% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(-22px); opacity: 0.9; }
+}

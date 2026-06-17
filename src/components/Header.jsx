@@ -5,19 +5,17 @@ import './Header.css'
 export default function Header({ showBack = false }) {
   return (
     <header className="library-header">
-      <div className="header-inner">
-        {showBack && (
-          <Link to="/" className="back-btn">
-            ← رجوع للمكتبة
-          </Link>
-        )}
-        <div className="header-text">
-          <p className="header-subtitle">مكتبة السنة الثانية</p>
-          <h1 className="header-title">📚 مكتبتنا الصغيرة</h1>
-          <p className="header-credit">
-            من إعداد المعلم <strong>{teacher.name}</strong> وتلاميذه
-          </p>
-        </div>
+      {showBack && (
+        <Link to="/" className="back-btn rise">
+          <span className="back-arrow">→</span> رجوع للمكتبة
+        </Link>
+      )}
+      <div className="header-text rise">
+        <p className="header-subtitle">مكتبة السنة الثانية</p>
+        <h1 className="header-title">مكتبة الصفّ</h1>
+        <p className="header-credit">
+          من إعداد المعلم <strong>{teacher.name}</strong> وتلاميذه
+        </p>
       </div>
     </header>
   )
